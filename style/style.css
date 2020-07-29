@@ -1,0 +1,210 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > div {
+    width: 80%;
+    height: 400px;
+}
+
+.super-centered {
+    background-color: aquamarine;
+    display:grid;
+    place-items: center;
+}
+.super-centered > div {
+    background-color: burlywood;
+    padding: 5% 10%;
+}
+
+.deconstructed-pancake {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.deconstructed-pancake > .box {
+    background-color: blanchedalmond;
+    flex: 1 1 150px;
+    margin: 5px;
+}
+
+.sidebar-says {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+}
+.sidebar-says > .sidebar {
+    background-color: coral;
+}
+
+.sidebar-says > .content {
+    background-color: cadetblue;
+}
+
+.pancake-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.pancake-stack div {
+    padding: 1.5%;
+}
+.pancake-stack .main {
+    background-color: cornsilk;
+}
+.pancake-stack .header {
+    background-color: cornflowerblue;
+}
+
+.pancake-stack .footer {
+    background-color: darkcyan;
+}
+
+.classic-holy-grail {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    grid-template-areas: "header header header" "left content right" "footer footer footer";
+}
+
+.classic-holy-grail div {
+    padding: 1.5%;
+}
+
+.classic-holy-grail .header {
+    background-color: darkgrey;
+    grid-area: header;
+}
+
+.classic-holy-grail .left {
+    background-color: darkkhaki;
+    grid-area: left;
+}
+
+.classic-holy-grail .content {
+    background: darksalmon;
+    grid-area: content;
+}
+
+.classic-holy-grail .right {
+    background-color: darkseagreen;
+    grid-area: right;
+}
+
+.classic-holy-grail .footer {
+    background-color: darkviolet;
+    grid-area: footer;
+}
+
+.span-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.span-grid div {
+    padding: 1.5%;
+    display: grid;
+    place-items: center;
+}
+
+.span-grid .span-12 {
+    background-color: darkkhaki;
+    grid-column: 1/ span 12;
+}
+
+.span-grid .span-6 {
+    background-color: fuchsia;
+    grid-column: 3/ span 6;
+}
+
+.span-grid .span-4 {
+    background-color: greenyellow;
+    grid-column: 2/ span 4;
+}
+
+.span-grid .span-2 {
+    background: indigo;
+    grid-column: 5/ span 2;
+}
+
+.ram {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.box {
+    display: grid;
+    place-items: center;
+}
+
+.box-1 {
+    background-color: darkturquoise;
+}
+
+.box-2 {
+    background-color: blanchedalmond;
+}
+
+.box-3 {
+    background-color: brown;
+}
+
+.box-4 {
+    background-color: aquamarine;
+}
+
+.line-up {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.line-up .visual {
+    width: 100%;
+    height: 100px;
+    background-color: chocolate;
+}
+
+.line-up .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: floralwhite;
+}
+
+.clamping {
+    display: grid;
+    place-items: center;
+}
+
+.clamping .card {
+    background-color: ghostwhite;
+    width: clamp(23ch, 50%, 46ch);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.clamping .visual {
+    width: 100%;
+    height: 100px;
+    background: coral;
+}
+
+
+.respect-for-aspect {
+    display: grid;
+    place-items: center;
+}
+
+.respect-for-aspect .card {
+    background-color: beige; 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.respect-for-aspect .visual {
+    aspect-ratio: 16 / 9;
+    background-color: crimson;
+}
